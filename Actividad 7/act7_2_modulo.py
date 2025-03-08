@@ -18,7 +18,7 @@ q=float(int(input()))
 racionales = act7_1_numeros.Racionales(q)
 racionales.print_numeros()
 
-print("Ingrese un numero racional para el modulko abstracto")
+print("Ingrese un numero racional para el modulo abstracto")
 m = float(input())
 racionales = act7_3_abstract_class.Racionales(m)
 racionales = act7_3_abstract_class.AbsNumeros()
