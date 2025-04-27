@@ -1,0 +1,6 @@
+﻿Build started at 08:41 p. m....
+1>------ Build started: Project: TestExploringActions1, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>TestExploringActions1 -> C:\Users\angel\source\repos\ExploringActions\TestExploringActions1\bin\Debug\net8.0\TestExploringActions1.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 08:41 p. m. and took 02.484 seconds ==========
