@@ -1,24 +1,31 @@
-name: .NET CI
+name: .NET Core Unit Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '6.0'
+
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+
+    - name: Build the project
       run: dotnet build --configuration Release
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+
+    - name: Run unit tests
+      run: dotnet test --configuration Release
