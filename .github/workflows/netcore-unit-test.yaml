@@ -25,10 +25,10 @@ jobs:
         dotnet-version: '6.0'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./netcore/ExploringActions.sln
 
     - name: Build the project
-      run: dotnet build --configuration Release
+      run: dotnet build ./netcore/ExploringActions.sln --configuration Release
 
     - name: Run unit tests
-      run: dotnet test --configuration Release
+      run: dotnet test ./netcore/ExploringActions.sln --configuration Release
