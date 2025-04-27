@@ -1,0 +1,21 @@
+name: Run Hello Python
+
+on:
+  workflow_dispatch:  # Permite ejecutarlo manualmente
+  push:               # También se ejecuta cuando hay un push
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'  # Instala la última versión de Python 3
+
+    - name: Run Python script
+      run: python act11_print_hello.py
