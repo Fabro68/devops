@@ -16,6 +16,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: List directory contents
+      run: ls -R  # Esto lista todos los archivos y carpetas en el repositorio
+
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
