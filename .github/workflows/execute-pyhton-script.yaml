@@ -1,0 +1,24 @@
+name: Run Hello Python
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: List files
+      run: ls -R
+
+    - name: Run Python script
+      run: python "Actividad 11/act11_print_hello.py"
